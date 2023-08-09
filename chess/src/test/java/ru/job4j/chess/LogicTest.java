@@ -29,7 +29,7 @@ public class LogicTest {
             logic.add(new BishopBlack(Cell.C8));
             logic.move(Cell.C8, Cell.D7);
         });
-        assertThat(exception).isInstanceOf(OccupiedCellException.class);
+        assertThat(exception.getMessage()).isEqualTo("Figure occupied.");
     }
 
     @Test
